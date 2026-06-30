@@ -12,6 +12,8 @@ import ReplayIcon from '@mui/icons-material/Replay';
 import { IconButton } from "@mui/material";
 import KnowledgeBase from './knowledgeBase.json';
 
+const chatBotAccessKey = process.env.REACT_APP_CHAT_BOT_API_KEY;
+
 /**
  * RAG CHATBOT WIDGET (SEMANTIC SEARCH — FRONTEND ONLY)
  * ----------------------------------------------------
@@ -60,7 +62,7 @@ async function generateAnswer(question) {
         },
         {
           headers: {
-            Authorization: `Bearer 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`,
+            Authorization: `Bearer ${chatBotAccessKey}`,
             "Content-Type": "application/json",
           },
         }
