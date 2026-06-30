@@ -101,7 +101,7 @@ export default function LayoutSection({ref}) {
         <Grid size={{ xs: 12, sm: 6, xl: 6 }}>
           <Box
             component="img"
-            src="/images/why.png" // replace with your image path
+            src="/images/Why.png" // replace with your image path
             alt="Sample"
             sx={{
               width: "100%",
