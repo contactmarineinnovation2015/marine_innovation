@@ -68,10 +68,11 @@ const Services = () => {
                     <Grid size={{ xs: 12, sm: 6, xl: 6 }}>
                     <Box
                         component="img"
-                        src="/images/sbg.png" // replace with your image path
+                        src="/images/layoutcut.png" // replace with your image path
                         alt="Sample"
                         sx={{
                         width: "100%",
+                        height: 500
                         }}
                     />
                     </Grid>
@@ -117,7 +118,7 @@ const Services = () => {
                 </Grid>
             </Container>
             <CardActions sx={{ justifyContent: "center" }}>
-                <Button onClick={() => setLocation('/services')} variant="contained" style={{backgroundColor: '#456882', borderWidth: 3, fontWeight: 'bold', marginTop: '6rem'}}>{`View More Services >`}</Button>
+                <Button onClick={() => setLocation('/services')} variant="contained" style={{backgroundColor: '#B31312', borderWidth: 3, fontWeight: 'bold', marginTop: '6rem'}}>{`View More Services >`}</Button>
             </CardActions>
         </Container>
     );

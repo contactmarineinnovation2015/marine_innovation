@@ -16,7 +16,7 @@ const productsData = [
   {
     id: 1,
     title: "Getting Started with React",
-    image: "/images/wartsila.jpeg",
+    image: "/images/wartsilalogo.png",
     description: `React is a popular JavaScript library for building user interfaces.
 It allows developers to create reusable UI components.
 The component-based architecture makes applications easier to maintain.
@@ -88,14 +88,61 @@ Good responsive design improves user experience.`
 const detailsCard = (detailItem) => {
     return (
     <Grid display={'flex'} justifyContent={'center'} size={{ xs: 12, sm: 6, md: 3 }} marginTop={'1rem'} >
-        <Card sx={{ backgroundColor: '#fff', borderRadius: 3, width: '75%', padding: 1.5 }}>
-            <CardMedia
-                component="img"
-                image={detailItem.image}
-                alt={detailItem.title}
-                style={{height: 142}}
-            />
-        </Card>
+        <Card
+  sx={{
+    position: "relative",
+    background: "#fff",
+    borderRadius: 3,
+    width: "75%",
+    padding: 1.5,
+    overflow: "hidden",
+    cursor: "pointer",
+
+    transition: "all .4s cubic-bezier(.17,.67,.36,1.3)",
+
+    boxShadow: "0 8px 25px rgba(0,0,0,.08)",
+
+    "&::before": {
+      content: '""',
+      position: "absolute",
+      inset: 0,
+      background:
+        "linear-gradient(135deg, rgba(29,84,109,.08), rgba(255,255,255,0))",
+      opacity: 0,
+      transition: ".4s",
+      zIndex: 0,
+    },
+
+    "&:hover::before": {
+      opacity: 1,
+    },
+
+    "&:hover": {
+      transform: "translateY(-12px)",
+      boxShadow: "0 25px 45px rgba(29,84,109,.25)",
+    },
+
+    "& img": {
+      position: "relative",
+      zIndex: 1,
+      transition: ".4s",
+    },
+
+    "&:hover img": {
+      transform: "scale(1.1)",
+    },
+  }}
+>
+  <CardMedia
+    component="img"
+    image={detailItem.image}
+    alt={detailItem.title}
+    sx={{
+      height: 142,
+      objectFit: "contain",
+    }}
+  />
+</Card>
     </Grid>
     );
 }

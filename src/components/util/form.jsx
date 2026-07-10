@@ -109,7 +109,7 @@ export default function ContactForm() {
         />
 
         {/* Submit Button */}
-        <Button type="submit" variant="contained" style={{backgroundColor: '#1D546D'}}>
+        <Button type="submit" variant="contained" style={{backgroundColor: '#B31312'}}>
           Send your Query 
           <SendIcon style={{marginLeft: 10}} />
         </Button>

@@ -11,3 +11,47 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@keyframes navekFloat {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes navekWave {
+  0% {
+    rotate: 0deg;
+  }
+
+  15% {
+    rotate: 6deg;
+  }
+
+  30% {
+    rotate: -6deg;
+  }
+
+  45% {
+    rotate: 6deg;
+  }
+
+  60% {
+    rotate: -4deg;
+  }
+
+  75% {
+    rotate: 3deg;
+  }
+
+  100% {
+    rotate: 0deg;
+  }
+}

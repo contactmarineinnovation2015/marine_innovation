@@ -15,8 +15,15 @@ const productsData = [
   {
     id: 1,
     title: "Wartsila Navi-Sailor 4000 ECDIS",
-    image: "/images/wartsila_sail.jpeg",
+    image: "/images/ecids_prod.png",
     description: `Wärtsilä Navi-Sailor ECDIS works seamlessly with the Fleet Optimisation Solution (FOS), ensuring you stay ahead in the maritime world. Complement it with Navi-Planner software and dedicated hardware, and you will see even smoother connectivity and functionality. Navi-Sailor offers a flexible track for the future S-100 upgrades that won’t require you to replace the hardware: our current solutions are S-100 ready. This will elevate your ECDIS near to being a comprehensive Fleet Operation System. The Navi-Sailor delivers enhanced situational awareness through high-resolution chart displays, real-time weather integration, and comprehensive voyage management tools.`
+  },
+  {
+    id: 1,
+    title: "ECDIS on Lease",
+    image: "/images/wartsila_1.jpg",
+    description: 'Wärtsilä ECDIS Leasing offers a smarter alternative to ownership with zero upfront investment. Pay a fixed monthly fee for a fully certified ECDIS system backed by lifetime warranty, software and hardware upgrades, annual certification, expert support, and automatic hardware refresh every five years. Stay compliant, eliminate technology obsolescence, and convert capital expenditure into predictable operational costs.',
+    detailedDescription: "Lease a Fully Certified Wärtsilä ECDIS — Without the Capital Investment.\n\nMarine Innovation's Wärtsilä ECDIS Leasing Program enables vessel owners and operators to deploy a fully certified, IMO-compliant ECDIS system through a simple monthly subscription instead of purchasing the hardware outright. From installation and certification to software updates, hardware upgrades, maintenance, and long-term support, we manage the complete lifecycle of your ECDIS while you benefit from predictable operating expenses and uninterrupted compliance. Simply sign the lease agreement, have the system installed by certified Wärtsilä engineers, and pay one fixed monthly fee covering the equipment, lifetime warranty, service, and ongoing support. Every mandatory software and hardware upgrade is included at no additional cost, ensuring your vessel always operates with the latest IMO-compliant technology. Certified engineers perform a remote Annual Performance Test (APT) every year and issue an ECDIS Shore Based Premium Maintenance Certificate to maintain compliance. Troubleshooting, repairs, and replacement units are fully covered, with vessel owners responsible only for travel-related expenses. To eliminate technology obsolescence, the latest Wärtsilä ECDIS hardware is automatically provided every five years, requiring only installation charges. With zero capital investment, predictable monthly payments, lifetime warranty, continuous compliance, and the flexibility to cancel with just 30 days' notice, Marine Innovation delivers a future-ready navigation solution backed by its position as a Master Distributor for Wärtsilä Voyage, the exclusive ECDIS leasing partner, an in-house service team, dedicated after-sales support, and the strength of the Jason Marine Group."
   },
   {
     id: 2,
@@ -84,8 +91,7 @@ const productsData = [
     title: "MedAssist Skills App",
     image: "/images/p13.png",
     description: `Interactive medical training platform designed to enhance healthcare capabilities aboard vessels. This comprehensive application provides medical procedure training, emergency response protocols, and continuing education resources for maritime medical personnel. Features simulation-based learning and certification tracking capabilities.`
-  },
-  
+  }
 ];
 
 const ProductCard = ({ product, onOpen }) => {
@@ -97,21 +103,65 @@ const ProductCard = ({ product, onOpen }) => {
       marginTop={"1rem"}
     >
       <Card
+        // sx={{
+        //   backgroundColor: "#0F2854",
+        //   borderRadius: 3,
+        //   width: "75%",
+        //   padding: 1.5,
+        //   cursor: "pointer",
+        // }}
         sx={{
-          backgroundColor: "#0F2854",
+          position: "relative",
+          background: "#0F2854",
           borderRadius: 3,
           width: "75%",
           padding: 1.5,
+          overflow: "hidden",
           cursor: "pointer",
+
+          transition: "all .4s cubic-bezier(.17,.67,.36,1.3)",
+
+          boxShadow: "0 8px 25px rgba(0,0,0,.08)",
+
+          "&::before": {
+            content: '""',
+            position: "absolute",
+            inset: 0,
+            background:
+              "linear-gradient(135deg, rgba(29,84,109,.08), rgba(255,255,255,0))",
+            opacity: 0,
+            transition: ".4s",
+            zIndex: 0,
+          },
+
+          "&:hover::before": {
+            opacity: 1,
+          },
+
+          "&:hover": {
+            transform: "translateY(-12px)",
+            boxShadow: "0 25px 45px rgba(29,84,109,.25)",
+          },
+
+          "& img": {
+            position: "relative",
+            zIndex: 1,
+            transition: ".4s",
+          },
+
+          "&:hover img": {
+            transform: "scale(1.1)",
+          },
         }}
         onClick={() => onOpen(product)}
       >
-        <Grid container spacing={2}>
+        <Grid container spacing={2} sx={{maxHeight: 250}}>
           <Grid size={{ xs: 12, md: 4 }}>
             <CardMedia
               component="img"
               image={product.image}
               height="100%"
+              width='100%'
               alt={product.title}
             />
           </Grid>
@@ -285,7 +335,7 @@ const ProductsList = ({ ref }) => {
           variant="contained"
           size="large"
           sx={{
-            backgroundColor: "#456882",
+            backgroundColor: "#B31312",
           }}
         >
           Inquire Now

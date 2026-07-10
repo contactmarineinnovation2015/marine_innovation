@@ -15,25 +15,25 @@ import { useEffect, useState } from "react";
 
 const servicesData = [
   {
-    id: 1,
-    title: "Servicing of Navigation Equipment",
+    id:1,
+    title: "MI Care 365",
     image: "/images/se1.jpg",
+    description: "Marine Innovation PTE. LTD. offers a comprehensive **Annual Remote Service Agreement (ARSA)** for **Wärtsilä (formerly Transas) Navi-Sailor 4000 ECDIS**, providing ship owners, fleet managers, technical managers, and vessel operators with reliable year-round remote technical support to maximize navigation system reliability, minimize operational downtime, and enhance fleet efficiency. Our ARSA delivers **24/7 remote technical assistance**, secure remote diagnostics and troubleshooting, annual remote system health and performance assessments, hardware and software support, technical advisory, and global service coordination by experienced maritime engineers. Whenever practical, our specialists remotely access the vessel's ECDIS to diagnose faults, resolve software and hardware issues, provide configuration guidance, analyze alarms, and recommend preventive maintenance measures, significantly reducing the need for costly onboard attendance. If an issue cannot be resolved remotely, Marine Innovation coordinates timely service attendance through its global maritime service network while ensuring seamless communication with vessel managers, technical superintendents, and local port agents. ARSA customers also benefit from **priority technical support**, **preferential service rates**, discounted onboard attendance and spare parts during the contract period, and expert assistance throughout the service lifecycle. The agreement is specifically designed for commercial vessels, including container ships, bulk carriers, tankers, offshore support vessels, LNG and LPG carriers, passenger vessels, research ships, government vessels, and workboats operating worldwide. By combining proactive remote monitoring, rapid response, expert troubleshooting, and global service coordination, Marine Innovation helps customers improve equipment availability, reduce maintenance costs, extend the operational life of their Wärtsilä ECDIS systems, and maintain safe, efficient, and compliant navigation across their fleet.",
+    detailedDescription: "Marine Innovation PTE. LTD. offers a comprehensive **Annual Remote Service Agreement (ARSA)** for **Wärtsilä (formerly Transas) Navi-Sailor 4000 ECDIS**, providing ship owners, fleet managers, technical managers, and vessel operators with reliable year-round remote technical support to maximize navigation system reliability, minimize operational downtime, and enhance fleet efficiency. Our ARSA delivers **24/7 remote technical assistance**, secure remote diagnostics and troubleshooting, annual remote system health and performance assessments, hardware and software support, technical advisory, and global service coordination by experienced maritime engineers. Whenever practical, our specialists remotely access the vessel's ECDIS to diagnose faults, resolve software and hardware issues, provide configuration guidance, analyze alarms, and recommend preventive maintenance measures, significantly reducing the need for costly onboard attendance. If an issue cannot be resolved remotely, Marine Innovation coordinates timely service attendance through its global maritime service network while ensuring seamless communication with vessel managers, technical superintendents, and local port agents. ARSA customers also benefit from **priority technical support**, **preferential service rates**, discounted onboard attendance and spare parts during the contract period, and expert assistance throughout the service lifecycle. The agreement is specifically designed for commercial vessels, including container ships, bulk carriers, tankers, offshore support vessels, LNG and LPG carriers, passenger vessels, research ships, government vessels, and workboats operating worldwide. By combining proactive remote monitoring, rapid response, expert troubleshooting, and global service coordination, Marine Innovation helps customers improve equipment availability, reduce maintenance costs, extend the operational life of their Wärtsilä ECDIS systems, and maintain safe, efficient, and compliant navigation across their fleet.",
+  },
+  {
+    id: 2,
+    title: "Servicing of Navigation Equipment",
+    image: "/images/Bridge.jpg",
     description: `Marine Innovation delivers expert repair services for comprehensive navigation and marine equipment. Our skilled technicians specialize in handling a wide range of devices in radar systems, GPS units, communication devices, and autopilot systems, ensuring reliable and timely repairs that keep your maritime equipment operating at peak performance.`,
     detailedDescription: `Marine Innovation delivers expert repair services for comprehensive navigation and marine equipment. Our skilled technicians specialize in handling a wide range of devices in radar systems, GPS units, communication devices, and autopilot systems, ensuring reliable and timely repairs that keep your maritime equipment operating at peak performance.`,
   },
   {
-    id: 2,
+    id: 3,
     title: "Servicing of Communication Equipment",
     image: "/images/se2.jpg",
     description: `Marine Innovation provides expert repair services for marine communication equipment. Our experienced technicians specialize in handling a wide range of devices including VHF radios, satellite communication systems, and onboard intercoms, delivering reliable repairs to ensure seamless maritime communications.`,
     detailedDescription: `Marine Innovation provides expert repair services for marine communication equipment. Our experienced technicians specialize in handling a wide range of devices including VHF radios, satellite communication systems, and onboard intercoms, delivering reliable repairs to ensure seamless maritime communications.`,
-  },
-  {
-    id: 3,
-    title: "ECDIS as a Service (Leasing)",
-    image: "/images/se3.png",
-    description: 'Wärtsilä ECDIS Leasing offers a smarter alternative to ownership with zero upfront investment. Pay a fixed monthly fee for a fully certified ECDIS system backed by lifetime warranty, software and hardware upgrades, annual certification, expert support, and automatic hardware refresh every five years. Stay compliant, eliminate technology obsolescence, and convert capital expenditure into predictable operational costs.',
-    detailedDescription: "Lease a Fully Certified Wärtsilä ECDIS — Without the Capital Investment.\n\nMarine Innovation's Wärtsilä ECDIS Leasing Program enables vessel owners and operators to deploy a fully certified, IMO-compliant ECDIS system through a simple monthly subscription instead of purchasing the hardware outright. From installation and certification to software updates, hardware upgrades, maintenance, and long-term support, we manage the complete lifecycle of your ECDIS while you benefit from predictable operating expenses and uninterrupted compliance. Simply sign the lease agreement, have the system installed by certified Wärtsilä engineers, and pay one fixed monthly fee covering the equipment, lifetime warranty, service, and ongoing support. Every mandatory software and hardware upgrade is included at no additional cost, ensuring your vessel always operates with the latest IMO-compliant technology. Certified engineers perform a remote Annual Performance Test (APT) every year and issue an ECDIS Shore Based Premium Maintenance Certificate to maintain compliance. Troubleshooting, repairs, and replacement units are fully covered, with vessel owners responsible only for travel-related expenses. To eliminate technology obsolescence, the latest Wärtsilä ECDIS hardware is automatically provided every five years, requiring only installation charges. With zero capital investment, predictable monthly payments, lifetime warranty, continuous compliance, and the flexibility to cancel with just 30 days' notice, Marine Innovation delivers a future-ready navigation solution backed by its position as a Master Distributor for Wärtsilä Voyage, the exclusive ECDIS leasing partner, an in-house service team, dedicated after-sales support, and the strength of the Jason Marine Group."
   }
 ];
 
@@ -47,12 +47,49 @@ const ServiceCard = ({ service, onOpen }) => {
     >
       <Card
         sx={{
-          backgroundColor: "#0F2854",
-          borderRadius: 3,
-          width: "75%",
-          padding: 1.5,
-          cursor: "pointer",
-        }}
+    position: "relative",
+    background: "#0F2854",
+    borderRadius: 3,
+    width: "75%",
+    padding: 1.5,
+    overflow: "hidden",
+    cursor: "pointer",
+
+    transition: "all .4s cubic-bezier(.17,.67,.36,1.3)",
+
+    boxShadow: "0 8px 25px rgba(0,0,0,.08)",
+
+    "&::before": {
+      content: '""',
+      position: "absolute",
+      inset: 0,
+      background:
+        "linear-gradient(135deg, rgba(29,84,109,.08), rgba(255,255,255,0))",
+      opacity: 0,
+      transition: ".4s",
+      zIndex: 0,
+    },
+
+    "&:hover::before": {
+      opacity: 1,
+    },
+
+    "&:hover": {
+      transform: "translateY(-12px)",
+      boxShadow: "0 25px 45px rgba(29,84,109,.25)",
+    },
+
+    "& img": {
+      position: "relative",
+      zIndex: 1,
+      transition: ".4s",
+    },
+
+    "&:hover img": {
+      transform: "scale(1.1)",
+    },
+  }}
+        
         onClick={() => onOpen(service)}
       >
         <Grid container spacing={2}>
@@ -229,7 +266,7 @@ const ServicesList = () => {
           variant="contained"
           size="large"
           sx={{
-            backgroundColor: "#456882",
+            backgroundColor: "#B31312",
           }}
         >
           Inquire Now

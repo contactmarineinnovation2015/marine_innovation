@@ -62,7 +62,7 @@ function App() {
   };
 
   return (
-    <div className="App" style={{maxWidth: '100%', backgroundColor: '#F9F5EB'}}>
+    <div className="App" style={{maxWidth: '100%', backgroundColor: '#fff'}}>
       {
         location === '/' ?
         <></> :

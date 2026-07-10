@@ -146,7 +146,7 @@ const Promotions = ({ref}) => {
                 {productsData.slice(0, 3).map((detailsCardItem) => <DetailsCard detailItem={detailsCardItem} />)}
             </Grid>
             <CardActions sx={{ justifyContent: "center" }}>
-                <Button onClick={() => setLocation('/postings')} variant="contained" style={{backgroundColor: '#456882', borderWidth: 3, fontWeight: 'bold', marginTop: '6rem'}}>{`View More Postings >`}</Button>
+                <Button onClick={() => setLocation('/postings')} variant="contained" style={{backgroundColor: '#B31312', borderWidth: 3, fontWeight: 'bold', marginTop: '6rem'}}>{`View More Postings >`}</Button>
             </CardActions>
         </Container>
     );

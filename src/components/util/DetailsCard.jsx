@@ -22,7 +22,44 @@ const DetailsCard = ({detailItem}) => {
 
     return (
     <Grid display={'flex'} justifyContent={'center'} size={{ xs: 12, sm: 4 }} marginTop={'1rem'} >
-        <Card sx={{ backgroundColor: '#0F2854', borderRadius: 3, width: '90%', padding: 1.5 }}>
+        <Card sx={{ backgroundColor: '#0F2854', borderRadius: 3, width: '90%', padding: 1.5,
+             overflow: "hidden",
+    cursor: "pointer",
+
+    transition: "all .4s cubic-bezier(.17,.67,.36,1.3)",
+
+    boxShadow: "0 8px 25px rgba(0,0,0,.08)",
+
+    "&::before": {
+      content: '""',
+      position: "absolute",
+      inset: 0,
+      background:
+        "linear-gradient(135deg, rgba(29,84,109,.08), rgba(255,255,255,0))",
+      opacity: 0,
+      transition: ".4s",
+      zIndex: 0,
+    },
+
+    "&:hover::before": {
+      opacity: 1,
+    },
+
+    "&:hover": {
+      transform: "translateY(-12px)",
+      boxShadow: "0 25px 45px rgba(29,84,109,.25)",
+    },
+
+    "& img": {
+      position: "relative",
+      zIndex: 1,
+      transition: ".4s",
+    },
+
+    "&:hover img": {
+      transform: "scale(1.1)",
+    },
+         }}>
             <CardMedia
                 component="img"
                 image={detailItem.image}

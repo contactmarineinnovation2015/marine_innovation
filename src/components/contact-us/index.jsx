@@ -13,7 +13,7 @@ import ContactForm from '../util/form';
 import Box from '@mui/material/Box';
 
 
-const detailsCardItems = [{id: 1, title: "Make a Call", desc1: "Telephone: +6564777737", desc2: "Fax: +6568721800"}, {id: 2, title: "Send Email", desc1: "Sales: sales@marinov.com.sg", desc2: "Inquiry: info@marinov.com.sg"}, {id: 3, title: "Visit our Office", desc1: "194, Pandan Loop, #06-01 196 Pantech Business Hub", desc2: "Singapore 128383"}]
+const detailsCardItems = [{id: 1, title: "Make a Call", desc1: "Sales: +65 86164861", desc2: "Service: +65 93913925 "}, {id: 2, title: "Send Email", desc1: "Sales: sales@marinov.com.sg", desc2: "Inquiry: info@marinov.com.sg"}, {id: 3, title: "Visit our Office", desc1: "194, Pandan Loop, #06-01 196 Pantech Business Hub", desc2: "Singapore 128383"}]
 
 const detailsCard = (detailItem) => {
     return (

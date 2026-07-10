@@ -48,7 +48,7 @@ function Home() {
   };
 
   return (
-    <div className="App" style={{maxWidth: '100%', backgroundColor: '#F9F5EB'}}>
+    <div className="App" style={{maxWidth: '100%', backgroundColor: '#fff'}}>
       <Navbar onNavigate={scrollTo} refs={{
         contactRef,
         aboutRef,
@@ -64,7 +64,7 @@ function Home() {
       <Services />
       <Promotions ref={promotionsRef} />
       <Component2 ref={header2Ref} />
-      <Component3 ref={header3Ref}  />
+      <Component3 ref={header3Ref} allMembers={false}  />
       <ContactUs ref={contactRef} /> 
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
