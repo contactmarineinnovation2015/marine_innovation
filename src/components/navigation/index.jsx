@@ -162,6 +162,7 @@ function NavBar({ onNavigate, refs }) {
                   borderRadius: 0,
                   display: "flex",
                   alignItems: "center",
+                  fontSize: 16
                 }}
               >
                 {page}

@@ -33,11 +33,20 @@ export default function WebsiteChatbotWidget() {
   const [input, setInput] = useState("");
 
   useEffect(() => {
-  const timer = setTimeout(() => {
-    setShowAnimatedMascot(false);
-  }, 15000); // 15 seconds
+  let timeout;
 
-  return () => clearTimeout(timer);
+  const toggleMascot = (isActive) => {
+    setShowAnimatedMascot(isActive);
+
+    timeout = setTimeout(() => {
+      toggleMascot(!isActive);
+    }, isActive ? 5000 : 10000);
+  };
+
+  // Start active
+  toggleMascot(true);
+
+  return () => clearTimeout(timeout);
 }, []);
 
   const toggleChat = () => {
