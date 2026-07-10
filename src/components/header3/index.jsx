@@ -27,14 +27,14 @@ const productsData = [
   {
     id: 3,
     title: "Mr. Roshan Singh",
-    image: "/images/Roshan_Singh.jpeg",
+    image: "/images/Roshan.png",
     description: "Business Development Manager",
     link: "https://www.linkedin.com/in/roshan-singh-6a274059/",
   },
   {
     id: 4,
     title: "Michella D Silva",
-    image: "/images/image.png",
+    image: "/images/Michell1.png",
     description: "Sales Manager",
     link: "https://www.linkedin.com/in/michelle-d-silva-586770a6/",
   },

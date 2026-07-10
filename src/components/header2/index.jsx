@@ -26,7 +26,7 @@ React is widely used in modern web development.`
   {
     id: 2,
     title: "Understanding Material UI",
-    image: "/images/vstep.jpeg",
+    image: "/images/danelec.jpeg",
     description: `Material UI is a React component library based on Google's Material Design.
 It provides pre-built components that are customizable and responsive.
 Themes allow you to control colors, typography, and spacing globally.

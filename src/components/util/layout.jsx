@@ -83,7 +83,7 @@ export default function LayoutSection({ref}) {
         >
           <Box
             component="img"
-            src="/images/Banner_1_mod.png"
+            src="/images/Banner_finaln.png"
             alt="Banner 1"
             sx={{
               width: "100%",

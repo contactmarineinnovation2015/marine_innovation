@@ -96,7 +96,7 @@ function NavBar({ onNavigate, refs }) {
             alt="Logo"
             onClick={() => setLocation("/")}
             sx={{
-              height: 44,
+              height: 50,
               display: "block",
               cursor: "pointer",
               mr: 3,

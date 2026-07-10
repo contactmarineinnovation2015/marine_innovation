@@ -17,6 +17,7 @@ import KnowledgeBase from "./knowledgeBase.json";
 const chatBotAccessKey = process.env.REACT_APP_CHAT_BOT_API_KEY;
 
 export default function WebsiteChatbotWidget() {
+  const [showAnimatedMascot, setShowAnimatedMascot] = useState(true);
   const [open, setOpen] = useState(false);
   const [showGreeting, setShowGreeting] = useState(true);
 
@@ -31,7 +32,13 @@ export default function WebsiteChatbotWidget() {
   const [retry, setRetry] = useState(false);
   const [input, setInput] = useState("");
 
-  
+  useEffect(() => {
+  const timer = setTimeout(() => {
+    setShowAnimatedMascot(false);
+  }, 15000); // 15 seconds
+
+  return () => clearTimeout(timer);
+}, []);
 
   const toggleChat = () => {
     //setShowGreeting(false);
@@ -169,27 +176,28 @@ ${question}
         </Grow>
 
         <Box
-  onClick={toggleChat}
-  sx={{
-    width: 200,
-    height: 200,
-    cursor: "pointer",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-  }}
->
+        onClick={toggleChat}
+        sx={{
+          width: 200,
+          height: 200,
+          cursor: "pointer",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
   <img
-    src="/images/mascot.gif"
-    alt="NAVÈK"
-    style={{
-      width: "100%",
-      height: "250%",
-      // objectFit: "contain",
-      // animation: "navekFloat 3s ease-in-out infinite, navekWave 1.8s ease-in-out infinite",
-      // transformOrigin: "65% 28%",
-    }}
-  />
+  src={
+    showAnimatedMascot
+      ? "/images/mascot.gif"
+      : "/images/mascot.png"
+  }
+  alt="NAVÈK"
+  style={{
+    width: "100%",
+    height: "200%",
+  }}
+/>
 </Box>
       </Box>
             {open && (

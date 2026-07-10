@@ -249,29 +249,6 @@ const ServicesList = () => {
           </Card>
         </Box>
       </Modal>
-
-      <Box
-        sx={{
-          position: "fixed",
-          bottom: 16,
-          left: 20,
-          right: 0,
-          display: "flex",
-          justifyContent: "flex-start",
-          zIndex: 1000,
-        }}
-      >
-        <Button
-          onClick={openInquireNow}
-          variant="contained"
-          size="large"
-          sx={{
-            backgroundColor: "#B31312",
-          }}
-        >
-          Inquire Now
-        </Button>
-      </Box>
     </Container>
   );
 };

@@ -34,7 +34,7 @@ const productsData = [
   {
     id: 1,
     title: "Enamor Sea Performer",
-    image: "/images/p3.jpg",
+    image: "/images/prod2.png",
     description: 'Professional-grade marine navigation system engineered for optimal performance in challenging maritime environments. The Sea Performer integrates multiple navigation sensors and provides reliable positioning data, route optimization, and comprehensive vessel monitoring capabilities. Built with robust maritime-grade components to ensure continuous operation in harsh sea conditions.'
   },
   {
@@ -320,7 +320,7 @@ const ProductsList = ({ ref }) => {
         </Box>
       </Modal>
 
-      <Box
+      {/* <Box
         sx={{
           position: "fixed",
           bottom: 16,
@@ -340,7 +340,7 @@ const ProductsList = ({ ref }) => {
         >
           Inquire Now
         </Button>
-      </Box>
+      </Box> */}
     </Container>
   );
 };
