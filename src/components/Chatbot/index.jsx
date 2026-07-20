@@ -139,7 +139,7 @@ ${question}
           gap: 1,
         }}
       >
-        <Grow in={showGreeting} timeout={700}>
+        <Grow in={showGreeting && !open} timeout={700}>
           <Paper
             elevation={8}
             sx={{
@@ -184,7 +184,30 @@ ${question}
           </Paper>
         </Grow>
 
-        <Box
+        {!open && (
+          <Box
+            onClick={toggleChat}
+            sx={{
+              width: 200,
+              height: 200,
+              cursor: "pointer",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <img
+              src={showAnimatedMascot ? "/images/mascot.gif" : "/images/mascot.png"}
+              alt="NAVÈK"
+              style={{
+                width: "100%",
+                height: "200%",
+              }}
+            />
+          </Box>
+        )}
+
+        {/* <Box
         onClick={toggleChat}
         sx={{
           width: 200,
@@ -195,19 +218,19 @@ ${question}
           alignItems: "center",
         }}
       >
-  <img
-  src={
-    showAnimatedMascot
-      ? "/images/mascot.gif"
-      : "/images/mascot.png"
-  }
-  alt="NAVÈK"
-  style={{
-    width: "100%",
-    height: "200%",
-  }}
-/>
-</Box>
+        <img
+        src={
+          showAnimatedMascot
+            ? "/images/mascot.gif"
+            : "/images/mascot.png"
+        }
+        alt="NAVÈK"
+        style={{
+          width: "100%",
+          height: "200%",
+        }}
+      />
+      </Box> */}
       </Box>
             {open && (
         <Paper

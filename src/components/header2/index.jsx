@@ -16,7 +16,7 @@ const productsData = [
   {
     id: 1,
     title: "Getting Started with React",
-    image: "/images/wartsilalogo.png",
+    image: "/images/wartsilalo.png",
     description: `React is a popular JavaScript library for building user interfaces.
 It allows developers to create reusable UI components.
 The component-based architecture makes applications easier to maintain.

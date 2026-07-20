@@ -98,7 +98,7 @@ export default function AboutUs({ref}) {
         <Grid size={{ xs: 12, sm: 6, xl: 6 }}>
           <Box
             component="img"
-            src="/images/about_2.png" // replace with your image path
+            src="/images/Abt_2.png" // replace with your image path
             alt="Sample"
             sx={{
               width: "100%",
@@ -116,7 +116,7 @@ export default function AboutUs({ref}) {
         <Grid size={{ xs: 12, sm: 6, xl: 6 }}>
           <Box
             component="img"
-            src="/images/about_3.png" // replace with your image path
+            src="/images/Abt_3.png" // replace with your image path
             alt="Sample"
             sx={{
               width: "100%",
